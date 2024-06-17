@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnecy | Brands</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="stylesheet" href="style1.css"> 
+    <script src="https://kit.fontawesome.com/e2bce648c2.js" crossorigin="hurphygames"></script>
+</head>
+<body>
+    
+   <div class="creator">
+    <nav>
+        <div class="container">
+    
+            <div class="lang-theme-op page-flex">
+                <div class="logo-section-nav">
+                    <a href="index.html"><img src="img/logo-w.png" alt="logo"></a>
+                </div>
+                <div class="nav-button">
+                    <a href="brand.html">Brand</a>
+                    <a href="creator.html">Creator</a>
+                </div>
+                <div class="lang-theme">
+                    <a href="contact.html">Contact</a>
+                    <div class="theme-container">
+                        <a href="#"><i class="fa-solid fa-sun"></i></a>
+                    </div>
+                    <div class="lang-container">
+                        <div class="lang-button">
+                            <img width="24" height="24" src="https://img.icons8.com/color/24/great-britain.png"
+                                alt="great-britain" />
+                            EN <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-dropdown">
+    
+                            <a href="#"><img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
+                                    alt="saudi-arabia" />AR</a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="main-section ">
+        <div class="container main creator-sec" style="flex-direction: column;">
+            <div class="main-text">
+                <h1><span>For</span><br>Brands</h1>
+            </div>
+            
+                <div class="button-container">
+                    <a style="background: #4e2492;" class="lang-button" href="web2.html">Web2 <i class="fa-solid fa-angle-right"></i></a>
+                    <a style="background: #581b74;" class="lang-button" href="web3.html">Web3 <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+        </div>
+       
+        
+    </section>
+   </div>
+
+   
+    
+
+    <script>
+
+        (function () {
+            "use strict";
+
+            // define variables
+            var items = document.querySelectorAll(".timeline li");
+
+            // check if an element is in viewport
+            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <=
+                    (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function callbackFunc() {
+                for (var i = 0; i < items.length; i++) {
+                    if (isElementInViewport(items[i])) {
+                        items[i].classList.add("in-view");
+                    }
+                }
+            }
+
+            // listen for events
+            window.addEventListener("load", callbackFunc);
+            window.addEventListener("resize", callbackFunc);
+            window.addEventListener("scroll", callbackFunc);
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
