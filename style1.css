@@ -104,7 +104,7 @@ nav{
     background: url(img/darkmode.gif);
     background-position: 100% 5%;
     background-repeat: no-repeat;
-    background-size: 105%;
+    background-size: cover;
     padding: 10px;
     border-radius: 5px;
     margin: 20px 0;
