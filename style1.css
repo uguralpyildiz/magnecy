@@ -1018,3 +1018,98 @@ h3 {
     }
     
 }
+
+.quick-form form{
+    width: 50%;
+}
+
+.quick-form .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    opacity: 1;
+    width: 100%;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.quick-form .form-input {
+    padding: 10px;
+    flex: 1;
+    box-sizing: border-box;
+    color: #f8b0e1 !important;
+    border: 2px solid #302032;
+    background: #510b5330;
+    /* Adding right margin to space out from the button */
+}
+.quick-form .form-input::placeholder{
+    color: #f8b0e180;
+}
+.quick-form .social-media-containers {
+    display: flex;
+    flex-direction: column;
+}.quick-form .form-input:focus{
+    border-color: #f8b0e1;
+    outline-color: transparent;
+}
+
+.quick-form button {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    background: #500b5381;
+    border-right: 2px solid #302032;
+    border-bottom: 2px solid #302032;
+    border-top: 2px solid #302032;
+    /* Ensure button is visible */
+    outline: none;
+    cursor: pointer;
+}
+
+.form-group.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.submit-message {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
+.quick-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    margin-bottom: 15px;
+}
+.quick-form{
+    width: 100%;
+    gap: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.submit-button{
+    width: 100%;
+    transition: .3s ease all;
+}
+.submit-button:hover{
+    box-shadow: 0 0 15px #ffffff30;
+}
+.slo-container{
+    position: sticky;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: #d6249f;
+    border: 2px solid #ffffff20;
+    background: #1F052B;
+    width: 50%;
+    height: 200px;
+}
