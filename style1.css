@@ -79,8 +79,9 @@ nav{
 .slider {
     
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-    height: 100px;
+    
     margin: 50px auto;
+    height: 300px;
     overflow: hidden;
     position: relative;
     width: 1200px;
@@ -100,9 +101,9 @@ nav{
 }
 
 .slider .slide-track {
-    animation: scroll 40s linear infinite;
+    
     display: flex;
-    width: calc(250px * 14);
+    
 }
 
 .slider .slide {
@@ -178,6 +179,7 @@ nav{
     box-shadow: 0 0 15px #0072B150;
     border-radius: 4px;
     width: 24%;
+    
 }
 .page-box-title{
     display: flex;
@@ -186,12 +188,16 @@ nav{
     font-size: 22px;
    
 }
+.w33 .page-box{
+    width: 30% !important;
+}
 .page-box:hover{
     transform: scale(1.05);
     background: rgb(56, 21, 73);
 }
 .page-alt{
     color: #e6e6e6;
+    height: 150px;
     font-family: "Montserrat", sans-serif;
 }
 .logo-section img{
