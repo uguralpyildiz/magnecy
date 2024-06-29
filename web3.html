@@ -190,6 +190,48 @@
         <img src="img/slogan.png" alt="">
     </section>
 
+    <section>
+        <div class="container" style="text-align: center;">
+            <div class="header-page">
+                Do you need a boost for your <span>web3 project?</span>
+            </div>
+            <div class="header-alt">
+                Get in touch with us to discuss how we can help you achieve your goals in web3 space
+                
+            </div>
+            <div class="quick-form">
+                <div class="slo-container">
+                    Get in touch
+                </div>
+                <form id="my-form" autocomplete="off" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name Surname" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="surname" name="surname" placeholder="Email" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="surname" name="surname" placeholder="Project website" required class="form-input">
+                    </div>
+                    <div id="social-media-container" class="social-media-containers">
+                        <div class="form-group">
+                            <input type="text" id="social-media-1" name="social_media_1" placeholder="Project Social Media Link"
+                                required class="form-input">
+                            <button type="button" id="plus-button" onclick="addSocialMediaInput()">+</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="reason" name="reason" placeholder="Your Message"
+                            class="form-input"></textarea>
+                    </div>
+                    <br><br>
+                    <button type="submit" value="Submit" class="form-input submit-button">Send</button>
+                    <div id="submit-message" class="submit-message"></div>
+                </form>
+            
+            </div>
+        </div>
+    </section>
 <footer class="text-gray-400 bg-gray-900 body-font">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
