@@ -80,7 +80,7 @@ nav{
     
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
     
-    margin: 50px auto;
+    margin: 0px auto;
     height: 300px;
     overflow: hidden;
     position: relative;
@@ -103,12 +103,18 @@ nav{
 .slider .slide-track {
     
     display: flex;
+    align-items: center !important;
     
 }
 
 .slider .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100px;
-    width: 250px;
+    margin: 5px;
+    border: 1px solid #ffffff20;
+    background: #1a111b;
 }
 .lang-theme-op{
     display: flex;
@@ -196,8 +202,11 @@ nav{
     background: rgb(56, 21, 73);
 }
 .page-alt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #e6e6e6;
-    height: 150px;
+    height: 180px;
     font-family: "Montserrat", sans-serif;
 }
 .logo-section img{
@@ -341,6 +350,7 @@ hr{
     justify-content: space-between;
     margin: 50px 0;
 }
+
 .creator-title{
     background: #1F052B;
     color: #d6249f;
@@ -351,6 +361,21 @@ hr{
 .box-creator{
     width: 30%;
     border: 2px solid #ffffff30;
+}
+.b-creator-web .box-creator{
+    width: 23%;
+    border: 2px solid #ffffff30;
+}
+.b-creator-web .creator-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 18px 0;
+    height: 100px;
+    background: #0d0213;
+    color: #f8b0e1;
+    font-family: "Montserrat", sans-serif;
 }
 .creator-list{
     font-size: 18px;
@@ -1106,6 +1131,40 @@ h3 {
 .submit-button:hover{
     box-shadow: 0 0 15px #ffffff30;
 }
+.kals{
+    display: flex;
+    gap: 10px;
+}
+.kals{
+    display: flex;
+    margin: 40px 0;
+    gap: 20px;
+}
+.img-container {
+    position: relative;
+    border: 2px solid #ffffff50;
+    width: 33% !important;
+    transition: .3s ease all;
+}
+.img-container-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000050;
+   
+}
+.img-container:hover {
+    color: #d6249f;
+    border: 2px solid #ffffff20;
+    box-shadow: 0 0 15px #ffffff10;
+}
 .slo-container{
     position: sticky;
     top: 150px;
@@ -1118,6 +1177,9 @@ h3 {
     background: #1F052B;
     width: 50%;
     height: 200px;
+}
+.WatchOnInstagramContainer{
+    display: none !important;
 }
 
 /* @media screen and (min-width:900px) {
