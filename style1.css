@@ -464,11 +464,12 @@ background: url(img/magnectintro.mp4);
     animation: move 3s ease-out infinite;
 }
 #myVideo {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    z-index: -1;
 }
 .chevron:first-child {
     animation: move 3s ease-out 1s infinite;
@@ -789,7 +790,7 @@ time i {
 .social-media-container{
     margin-top: 50px;
     padding: 10px;
-    background: linear-gradient(to top, #9362af5e, #000000);
+    background: linear-gradient(to top, #9362af5e, transparent);
     border-bottom: 2px solid #ffffff50;
 }
 .social-links:nth-child(1) {
