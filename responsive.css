@@ -1,0 +1,52 @@
+ @media screen and (min-width:900px) {
+    .overlay{
+        display: none !important;
+    }
+}
+@media screen and (max-width:900px) {
+    .lang-theme-op {
+        position: fixed;
+        top: 0;
+        left: -150%;
+        background: #050505;
+        align-items: start;
+        justify-content: start;
+        height: 100vh;
+        width: 300px;
+        flex-direction: column;
+        z-index: 9999;
+    }
+    .logo-section-nav img{
+        width: 150px !important;
+        max-width: 150px;
+    }
+    .nav-button{
+        width: 100% !important;
+        gap: 20px;
+        background: #000;
+        align-items: start !important;
+        justify-content: start !important;
+        flex-direction: column !important;
+    }
+    .lang-theme{
+        gap: 20px;
+        margin-top: 20px;
+        width: 100% !important;
+        align-items: start !important;
+        justify-content: start !important;
+        text-align: left !important;
+        flex-direction: column !important;
+        background: #000;
+    }
+   
+    .overlay{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #00000090;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+    }
+} 

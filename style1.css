@@ -31,7 +31,7 @@ section {
 }
 
 body{
-    background: #000;
+    background: #fff;
     color: #fff;
     font-size: 16px;
     font-family: 'Batangas', serif;
@@ -58,13 +58,13 @@ nav{
 .page-box-title{
     padding: 18px 0;
     width: 100%;
-    background: #260038;
+    background: #faeeff;
     color: #d6249f;
 }
 .page-alt{
     padding: 16px !important;
-    background: #100019;
-    color: #f8b0e1 !important;
+    background: #fff;
+    color: #d6249f !important;
 }
 @keyframes scroll {
     0% {
@@ -115,11 +115,11 @@ nav{
     height: 100px;
     margin: 5px;
     border: 1px solid #ffffff20;
-    background: #1a111b;
+    background: #fff;
 }
 .lang-theme-op{
     display: flex;
-    background: url(img/darkmode.gif);
+    background: url(img/lightmode.gif);
     background-position: 100% 5%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,6 +139,7 @@ nav{
 }
 
 .header-page{
+    color: #000;
     font-size: 32px;
     padding: 18px 0;
     margin-top: 50px;
@@ -147,7 +148,7 @@ nav{
     color: #d6249f;
 }
 .header-alt{
-    color: #f5f5f5;
+    color: #0c0c0c;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
 }
@@ -177,7 +178,7 @@ nav{
     align-items: center;
     justify-content: center;
     position: relative;
-    background: rgba(56, 21, 73, 0.473);
+    background: #fff;
     border: 2px solid #ffffff21;
     padding:25px 15px;
     font-size: 18px;
@@ -187,6 +188,22 @@ nav{
     
     width: 24%;
     
+}
+.text-gray-400{
+    color: #000 !important;
+}
+.bg-gray-800{
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 15px #0072B150;
+}
+.bg-gray-800:focus{
+    background: #fff;
+    box-shadow: 0 0 15px #0072B150;
+    color: #000;
+}
+.border-gray-700{
+    border-color: #fff;
 }
 .page-box-title{
     display: flex;
@@ -232,7 +249,7 @@ nav{
     align-items: center;
     gap: 5px;
     width: 100%;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     padding:10px;
 }
@@ -241,6 +258,9 @@ nav{
     position: relative;
     overflow: hidden;
     cursor: pointer;
+}
+.lang-button i{
+    color: #000;
 }
 .lang-theme{
     display: flex;
@@ -255,7 +275,7 @@ nav{
     top: 40px;
     right: 0px;
     width: 100%;
-    background: #302c3d;
+    background: #fff;
     
     transform: scale(0);
     opacity: 0;
@@ -353,7 +373,7 @@ hr{
 }
 
 .creator-title{
-    background: #1F052B;
+    background: #faeeff;
     color: #d6249f;
     padding: 18px 0;
  
@@ -361,7 +381,8 @@ hr{
 }
 .box-creator{
     width: 30%;
-    border: 2px solid #ffffff30;
+    
+    box-shadow: 0 0 15px #0072B150;
 }
 .b-creator-web .box-creator{
     width: 23%;
@@ -374,15 +395,15 @@ hr{
     font-size: 18px;
     padding: 18px 0;
     height: 100px;
-    background: #0d0213;
-    color: #f8b0e1;
+    background: #fff;
+    color: #d6249f;
     font-family: "Montserrat", sans-serif;
 }
 .creator-list{
     font-size: 18px;
     padding: 18px 0;
-    background: #0d0213;
-        color: #f8b0e1;
+    background: #fff;
+        color: #d6249f;
         font-family: "Montserrat", sans-serif;
 }
 section .container img{
@@ -769,6 +790,10 @@ time i {
     align-items: center;
     justify-content: start;
 }
+.page-flex a{
+    color: #000;
+    transform: scale(1.1);
+}
 .page-flex a:hover{
     color: #ff9bdf;
     transform: scale(1.1);
@@ -914,8 +939,9 @@ h3 {
     flex-direction: column;
     font-size: 16px;
     color: #FFFFFF;
-    background: rgba(56, 21, 73, 0.473);
+    background: rgba(255, 255, 255, 0.473);
     border: 2px solid #ffffff20;
+    box-shadow: 0 0 15px #0072B150;
     margin: 50px 0;
     text-align: left;
     padding: 20px;
@@ -926,7 +952,7 @@ h3 {
     width: 30em;
     
     background: transparent;
-    box-shadow: inset 0px 0px 8px #323232;
+   
     overflow: hidden;
     padding: 5px;
 }
@@ -1076,13 +1102,14 @@ h3 {
     padding: 10px;
     flex: 1;
     box-sizing: border-box;
-    color: #f8b0e1 !important;
-    border: 2px solid #302032;
-    background: #510b5330;
+    color: #d6249f !important;
+    border: 2px solid #fff;
+    background: #fff;
+    box-shadow: 0 0 15px #0072B150;
     /* Adding right margin to space out from the button */
 }
 .quick-form .form-input::placeholder{
-    color: #f8b0e180;
+    color: #f78cd5;
 }
 .quick-form .social-media-containers {
     display: flex;
@@ -1097,9 +1124,9 @@ h3 {
     box-sizing: border-box;
     display: inline-block;
     background: #500b5381;
-    border-right: 2px solid #302032;
-    border-bottom: 2px solid #302032;
-    border-top: 2px solid #302032;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
     /* Ensure button is visible */
     outline: none;
     cursor: pointer;
@@ -1180,9 +1207,10 @@ h3 {
     align-items: center;
     justify-content: center;
     font-size: 38px;
-    color: #d6249f;
+    color: #000 !important;
     border: 2px solid #ffffff20;
-    background: #1F052B;
+    background: #fff;
+    box-shadow: 0 0 15px #0072B150;
     width: 50%;
     height: 200px;
 }
@@ -1251,12 +1279,12 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    color: #000;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #00000050;
+    background: #ffffff50;
     backdrop-filter: blur(6px);
     z-index: 99;
     cursor: pointer;
