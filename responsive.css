@@ -1,20 +1,48 @@
+ 
+ .nav2 {
+    display: none;
+     position: fixed;
+     top: 0;
+     background: url(img/darkmode.gif);
+    background-position: 100% 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     padding:0 10px !important;
+     z-index: 99;
+ }
+ .nav2 .logo-section-nav a img{
+    width: 100px !important;
+ }
+ .menubtn-m{
+    cursor: pointer;
+    padding: 10px;
+    background: #ffffff10;
+ }
  @media screen and (min-width:900px) {
     .overlay{
         display: none !important;
     }
 }
 @media screen and (max-width:900px) {
+    .nav2{
+        display: flex;
+    }
     .lang-theme-op {
         position: fixed;
         top: 0;
         left: -150%;
-        background: #050505;
+        background: #000000;
         align-items: start;
         justify-content: start;
         height: 100vh;
-        width: 300px;
+        width: 230px;
         flex-direction: column;
         z-index: 9999;
+        transition: .3s ease all;
     }
     .logo-section-nav img{
         width: 150px !important;
@@ -23,7 +51,7 @@
     .nav-button{
         width: 100% !important;
         gap: 20px;
-        background: #000;
+        background: transparent;
         align-items: start !important;
         justify-content: start !important;
         flex-direction: column !important;
@@ -36,7 +64,7 @@
         justify-content: start !important;
         text-align: left !important;
         flex-direction: column !important;
-        background: #000;
+        background: transparent;
     }
    
     .overlay{
@@ -45,8 +73,135 @@
         top: 0;
         left: 0;
         background: #00000090;
+        backdrop-filter: blur(5px);
         width: 100vw;
         height: 100vh;
         z-index: 999;
     }
+    .page-box-container{
+        flex-direction: column;
+    }
+   
+    .w33 .page-box{
+        width: 100% !important;
+    }
+    .q33 .langanim{
+        width: 100% !important;
+    }
+    .b-creator-sec{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box-creator{
+        width: 100% !important;
+    }
+    .slider{
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide-track{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .slide{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .b-creator-sec{
+        flex-direction: column;
+    }
+    .slo-container{
+        display: none;
+    }
+    #my-form{
+        width: 100% !important;
+    }
+    .form-group{
+        width: 100% !important;
+    }
+    .form-group .form-input{
+        width: 100% !important;
+    }
+    .slide img{
+        width: 100%;
+    }
+    .slide{
+        height: auto !important;
+        width: 90px;
+    }
+    .slide-track{
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .header-page{
+        font-size: 22px;
+    }
+    .header-alt{
+        font-size: 16px;
+    }
+    .page-box-title{
+        font-size: 18px;
+    }
+    .kal h3{
+        font-size: 22px !important;
+    }
+    .creator-list{
+        font-size: 16px;
+    }
+    .creator-title{
+        font-size: 18px;
+    }
+    .button-containser{
+        display: flex !important;
+        flex-direction: row;
+    }
+    .button-container a{
+        width: 100px;
+    }
+    .fa-angle-right{
+        display: none !important;
+    }
+    .mt-8 .button-container a{
+        width: 100%;
+    }
+    .mt-8 .button-container a img{
+        width: 25px;
+    }
+        .w-1\/2{
+            width: 100% !important;
+        }
+    .logo-section-nav a img{
+        width: 100px !important;
+        
+    }
+    .nav-button a{
+        font-size: 16px;
+    }
+        #myVideo {
+            object-fit: cover;
+            object-position: center center;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
 } 
+
+@media screen and (max-width:650px){
+    .kals {
+            flex-direction: column;
+        }
+    
+        .img-container {
+            width: 100% !important;
+        }
+}

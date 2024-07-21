@@ -1,3 +1,16 @@
+const menubtn = document.querySelector(".menubtn-m")
+const overlay = document.querySelector(".overlay")
+const nav = document.querySelector(".lang-theme-op")
+
+
+menubtn.addEventListener("click", ()=>{
+    nav.style.left = "0"
+    overlay.style.display = "block"
+})
+overlay.addEventListener("click", ()=>{
+    overlay.style.display = "none"
+    nav.style.left = "-150%"
+})
 let socialMediaCount = 1;
 
 function addSocialMediaInput() {

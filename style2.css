@@ -509,7 +509,7 @@ section .container img {
 
 #myVideo {
     object-fit: cover;
-    object-position: center;
+  object-position: center center;
     position: absolute;
     right: 0;
     bottom: 0;
