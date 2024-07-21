@@ -1,6 +1,6 @@
  
  .nav2 {
-    display: none;
+    display: none !important;
      position: fixed;
      top: 0;
      background: url(img/darkmode.gif);
@@ -12,7 +12,7 @@
      justify-content: space-between;
      width: 100%;
      padding:0 10px !important;
-     z-index: 9999 !important;
+     z-index: 9998 !important;
  }
  .nav2 .logo-section-nav a img{
     width: 100px !important;
@@ -29,7 +29,7 @@
 }
 @media screen and (max-width:900px) {
     .nav2{
-        display: flex;
+        display: flex !important;
     }
     .lang-theme-op {
         position: fixed;
