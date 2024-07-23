@@ -1,4 +1,9 @@
- 
+ .desktopvideo{
+    display: block;
+ }
+ .mobilevideo{
+    display: none;
+ }
  .nav2 {
     display: none !important;
      position: fixed;
@@ -26,8 +31,16 @@
     .overlay{
         display: none !important;
     }
+    
 }
 @media screen and (max-width:900px) {
+    .desktopvideo {
+            display: none;
+        }
+    
+        .mobilevideo {
+            display: block;
+        }
     .nav2{
         display: flex !important;
     }
@@ -186,11 +199,12 @@
     }
         #myVideo {
             object-fit: cover;
-            object-position: center center;
+            object-position: top center;
             position: absolute;
             right: 0;
             bottom: 0;
             min-width: 100%;
+            width: 100% !important;
             min-height: 100%;
             z-index: -1;
         }
