@@ -1294,6 +1294,9 @@ h3 {
     width: 50%;
     height: 200px;
 }
+.px-5 h1{
+    color: #000 !important;
+}
 #my-form input, #my-form textarea, .p-2 input, .p-2 textarea{
     border-color: #00000021;
     background: #F4EEF7 !important;
