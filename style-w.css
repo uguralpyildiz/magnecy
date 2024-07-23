@@ -41,6 +41,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 9999;
+    
 }
 
 .container {
@@ -128,10 +129,10 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100px;
-
+    box-shadow: 0 0 15px #00000050;
     margin: 20px 0;
     align-items: center;
-    border: 2px solid #ffffff50;
+    border: 2px solid #00000030;
     justify-content: end;
 }
 
@@ -1287,9 +1288,9 @@ h3 {
     align-items: center;
     justify-content: center;
     font-size: 38px;
-    color: #d6249f;
-    border: 2px solid #ffffff20;
-    background: #1F052B;
+    color: #000 !important;
+    border: 2px solid #00000020;
+    background: #F4EEF7;
     width: 50%;
     height: 200px;
 }
