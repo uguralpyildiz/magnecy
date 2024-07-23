@@ -34,6 +34,9 @@
     
 }
 @media screen and (max-width:900px) {
+    .lang-container{
+        margin-left: 8px;
+    }
     .mobile-themes{
         display: none;
     }
