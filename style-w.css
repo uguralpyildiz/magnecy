@@ -30,7 +30,7 @@ section {
 }
 
 body {
-    background: #000;
+    background: #fff;
     color: #fff;
     font-size: 16px;
     font-family: 'Batangas', serif;
@@ -65,8 +65,8 @@ nav {
 
 .page-alt {
     padding: 16px !important;
-    background: #100019;
-    color: #f8b0e1 !important;
+    background: #fcf6ff;
+    color: #d6249f !important;
 }
 
 @keyframes scroll {
@@ -117,8 +117,8 @@ nav {
     justify-content: center;
     height: 100px;
     margin: 5px;
-    border: 1px solid #ffffff20;
-    background: #1a111b;
+    border: 1px solid #00000021;
+    background: #f9f0fa;
 }
 
 .lang-theme-op {
@@ -146,6 +146,7 @@ nav {
     font-size: 32px;
     padding: 18px 0;
     margin-top: 50px;
+    color: #000;
 }
 
 .header-page span {
@@ -153,7 +154,7 @@ nav {
 }
 
 .header-alt {
-    color: #f5f5f5;
+    color: #353535;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
 }
@@ -187,8 +188,8 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: rgba(56, 21, 73, 0.473);
-    border: 2px solid #ffffff21;
+    background: rgba(240, 231, 245, 0.473);
+    border: 2px solid #00000021;
     padding: 25px 15px;
     font-size: 18px;
     transition: .4s ease all;
@@ -204,7 +205,7 @@ nav {
     align-items: center;
     justify-content: center;
     font-size: 22px;
-
+    background: rgba(240, 231, 245, 0.473);
 }
 
 .w33 .page-box {
@@ -379,7 +380,7 @@ hr {
 }
 
 .creator-title {
-    background: #1F052B;
+    background: #F4EEF7;
     color: #d6249f;
     padding: 18px 0;
 
@@ -403,16 +404,16 @@ hr {
     font-size: 18px;
     padding: 18px 0;
     height: 100px;
-    background: #0d0213;
-    color: #f8b0e1;
+    background: #f5f5f5;
+        color: #d6249f;
     font-family: "Montserrat", sans-serif;
 }
 
 .creator-list {
     font-size: 18px;
     padding: 18px 0;
-    background: #0d0213;
-    color: #f8b0e1;
+    background: #f5f5f5;
+    color: #d6249f;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -981,9 +982,9 @@ h3 {
     justify-content: start;
     flex-direction: column;
     font-size: 16px;
-    color: #FFFFFF;
-    background: rgba(56, 21, 73, 0.473);
-    border: 2px solid #ffffff20;
+    color: #000000;
+    background: rgba(240, 231, 245, 0.473);
+    border: 2px solid #00000020;
     margin: 50px 0;
     text-align: left;
     padding: 20px;
@@ -1003,6 +1004,9 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: start;
+}
+.kal h3{
+    color: #000000;
 }
 
 .progress {
@@ -1264,9 +1268,12 @@ h3 {
     width: 100%;
     height: 100%;
     background: #00000050;
-
+    color: #fff;
 }
 
+.px-5 .lang-button{
+    background: #282330 !important;
+}
 .img-container:hover {
     color: #d6249f;
     border: 2px solid #ffffff20;
@@ -1286,7 +1293,24 @@ h3 {
     width: 50%;
     height: 200px;
 }
-
+#my-form input, #my-form textarea, .p-2 input, .p-2 textarea{
+    border-color: #00000021;
+    background: #F4EEF7 !important;
+    color: #f56dca !important;
+}
+#my-form input::placeholder, #my-form textarea::placeholder{
+    color: #f56dca;
+}
+#my-form button{
+    border-color: #00000021;
+}
+#my-form .submit-button{
+    background: #f56dca !important;
+    color: #fff !important;
+}
+.bg-gray-900 {
+    background: #f5f5f5 !important;
+}
 .WatchOnInstagramContainer {
     display: none !important;
 }
@@ -1357,7 +1381,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #00000050;
+    background: #ffffff50;
     backdrop-filter: blur(6px);
     z-index: 99;
     cursor: pointer;
