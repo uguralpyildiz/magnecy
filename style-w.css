@@ -812,7 +812,9 @@ time i {
     justify-content: center;
     width: 33.3%;
 }
-
+.nav-button a{
+    color: #000;
+}
 .page-flex .logo-section-nav {
     display: flex;
     align-items: center;
@@ -833,7 +835,9 @@ time i {
     align-items: center;
 
 }
-
+.lang-theme a{
+    color: #000;
+}
 .social-links:hover {
     transform: scale(1.1);
 }
