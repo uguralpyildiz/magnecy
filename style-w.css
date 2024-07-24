@@ -394,6 +394,7 @@ hr {
 
 .box-creator {
     width: 30%;
+    box-shadow: 0 0 15px #09034E20;
     border: 2px solid #ffffff30;
 }
 
