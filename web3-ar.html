@@ -6,8 +6,8 @@
     <title>Magnecy | Brands Web3</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
-    <link rel="stylesheet" href="style2.css">
-<link rel="stylesheet" href="responsive.css"> 
+    <link id="style1" rel="stylesheet" href="style2.css">
+    <link id="style2" rel="stylesheet" href="responsive.css"> 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -26,6 +26,69 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://kit.fontawesome.com/e2bce648c2.js" crossorigin="hurphygames"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                applyDarkTheme();
+            } else {
+                applyLightTheme(); // Eğer tema yoksa, varsayılan olarak light tema uygula
+            }
+        });
+
+        function applyDarkTheme() {
+            document.getElementById('style1').setAttribute('href', 'style-w.css');
+            document.getElementById('style2').setAttribute('href', 'responsive-w.css');
+            document.querySelectorAll('a .fa-sun').forEach(el => {
+                el.classList.remove('fa-sun');
+                el.classList.add('fa-moon');
+            });
+            document.querySelectorAll('img').forEach(img => {
+                if (img.src.includes('logo-w.png')) {
+                    img.setAttribute('src', 'img/logo-b.png');
+                } else if (img.src.includes('slogan.png')) {
+                    img.setAttribute('src', 'img/slogan2.png');
+                }
+            });
+            document.querySelectorAll('div.slider img').forEach(img => {
+                const src = img.getAttribute('src');
+                img.setAttribute('src', src.replace('white/', 'black/'));
+            });
+            localStorage.setItem('theme', 'dark');
+        }
+
+        function applyLightTheme() {
+            document.getElementById('style1').setAttribute('href', 'style2.css');
+            document.getElementById('style2').setAttribute('href', 'responsive.css');
+            document.querySelectorAll('a .fa-moon').forEach(el => {
+                el.classList.remove('fa-moon');
+                el.classList.add('fa-sun');
+            });
+            document.querySelectorAll('img').forEach(img => {
+                if (img.src.includes('logo-b.png')) {
+                    img.setAttribute('src', 'img/logo-w.png');
+                } else if (img.src.includes('slogan2.png')) {
+                    img.setAttribute('src', 'img/slogan.png');
+                }
+            });
+            document.querySelectorAll('div.slider img').forEach(img => {
+                const src = img.getAttribute('src');
+                img.setAttribute('src', src.replace('black/', 'white/'));
+            });
+            localStorage.setItem('theme', 'light');
+        }
+
+        document.addEventListener('click', function (event) {
+            if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark') {
+                    applyLightTheme();
+                } else {
+                    applyDarkTheme();
+                }
+            }
+        });
+    </script>
 </head>
 <body>
     
@@ -77,7 +140,7 @@
     <section class="main-section ">
         <div class="container main creator-sec">
             <div class="main-text">
-                <h1><span>لـ Web3</span><br>العلامات التجارية</h1>
+                <h1><span>لـ Web3</span> العلامات التجارية</h1>
             </div>
         </div>
         <a href="#page" class="btn-bottom">
@@ -294,7 +357,7 @@
     <section class="main-section ">
         <div class="container main creator-sec">
             <div class="main-text">
-                <h1><span>لـ Web3</span><br>العلامات التجارية</h1>
+                <h1><span>لـ Web3</span> العلامات التجارية</h1>
             </div>
         </div>
         <a href="#page" class="btn-bottom">

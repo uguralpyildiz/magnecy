@@ -8,8 +8,8 @@
     <title>Magnecy | علامات تجارية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link id="style1" rel="stylesheet" href="style2.css">
+    <link id="style2" rel="stylesheet" href="responsive.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -28,6 +28,55 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://kit.fontawesome.com/e2bce648c2.js" crossorigin="hurphygames"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                applyDarkTheme();
+            }
+        });
+
+        function applyDarkTheme() {
+            document.getElementById('style1').setAttribute('href', 'style-w.css');
+            document.getElementById('style2').setAttribute('href', 'responsive-w.css');
+            document.querySelectorAll('a .fa-sun').forEach(el => {
+                el.classList.remove('fa-sun');
+                el.classList.add('fa-moon');
+            });
+            document.querySelectorAll('img').forEach(img => {
+                if (img.src.includes('logo-w.png')) {
+                    img.setAttribute('src', 'img/logo-b.png');
+                }
+            });
+            localStorage.setItem('theme', 'dark');
+        }
+
+        function applyLightTheme() {
+            document.getElementById('style1').setAttribute('href', 'style2.css');
+            document.getElementById('style2').setAttribute('href', 'responsive.css');
+            document.querySelectorAll('a .fa-moon').forEach(el => {
+                el.classList.remove('fa-moon');
+                el.classList.add('fa-sun');
+            });
+            document.querySelectorAll('img').forEach(img => {
+                if (img.src.includes('logo-b.png')) {
+                    img.setAttribute('src', 'img/logo-w.png');
+                }
+            });
+            localStorage.setItem('theme', 'light');
+        }
+
+        document.addEventListener('click', function (event) {
+            if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark') {
+                    applyLightTheme();
+                } else {
+                    applyDarkTheme();
+                }
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -94,19 +143,20 @@
         <section class="main-section ">
             <div class="container main creator-sec" style="flex-direction: column;">
                 <div class="main-text">
-                    <h1><span>للـ</span><br>علامات تجارية</h1>
+                    <span>للـ</span> علامات تجارية</h1>
                 </div>
-
+        
                 <div class="button-container">
-                    <a style="background: #a51c7a;" class="lang-button" href="web2-ar.html">ويب ٢ <i
-                            class="fa-solid fa-angle-right"></i></a>
-                    <a style="background: #a51c7a;" class="lang-button" href="web3-ar.html">ويب ٣ <i
-                            class="fa-solid fa-angle-right"></i></a>
+                    <a style="background: #a51c7a;" class="lang-button" href="web2-ar.html">
+                        <div id="brandsweb2">Web2</div> <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <a style="background: #a51c7a;" class="lang-button" href="web3-ar.html">
+                        <div id="brandsweb3">Web3</div> <i class="fa-solid fa-angle-right"></i>
+                    </a>
                 </div>
-
             </div>
-
-
+        
+        
         </section>
     </div>
 

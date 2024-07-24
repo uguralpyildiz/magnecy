@@ -799,10 +799,7 @@ time i {
     margin: 80px;
 }
 
-.main-text h1 span {
-    color: #d6249f;
-    font-size: 28px;
-}
+
 
 .page-flex .logo-section-nav,
 .page-flex .nav-button,
@@ -945,7 +942,7 @@ time i {
 
 .button-container:hover.button-container a i {
     opacity: 1;
-    right: 20px;
+    right: 10px;
 }
 
 #light {

@@ -11,6 +11,50 @@ overlay.addEventListener("click", ()=>{
     overlay.style.display = "none"
     nav.style.left = "-150%"
 })
+
+const web2 = document.querySelector("#brandsweb2")
+
+    function infinite() {
+        setTimeout(() => {
+            web2.innerHTML = "Social Media"
+        }, 1000);
+        setTimeout(() => {
+            web2.innerHTML = "Influencer"
+        }, 2000);
+        setTimeout(() => {
+            web2.innerHTML = "Marketing"
+        }, 3000);
+        setTimeout(() => {
+            web2.innerHTML = "Web2"
+        }, 4000);
+        setTimeout(() => {
+            infinite()
+        }, 5000);
+    }
+
+    infinite()
+const web3 = document.querySelector("#brandsweb3")
+
+    function infinite2() {
+        setTimeout(() => {
+            web3.innerHTML = "Crypto"
+        }, 1000);
+        setTimeout(() => {
+            web3.innerHTML = "Blockchain"
+        }, 2000);
+        setTimeout(() => {
+            web3.innerHTML = "NFT"
+        }, 3000);
+        setTimeout(() => {
+            web3.innerHTML = "Web3"
+        }, 4000);
+        setTimeout(() => {
+            infinite2()
+        }, 5000);
+    }
+
+    infinite2()
+
 let socialMediaCount = 1;
 
 function addSocialMediaInput() {
