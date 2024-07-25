@@ -52,7 +52,7 @@ const web2 = document.querySelector("#brandsweb2")
             
         }, 8000);
         setTimeout(() => {
-            web2.style.top = "50px"
+            web2.style.top = "0px"
         }, 9000);
         setTimeout(() => {
             infinite()
@@ -101,7 +101,7 @@ function infinite2() {
 
     }, 8000);
     setTimeout(() => {
-        web3.style.top = "50px"
+        web3.style.top = "0px"
     }, 9000);
     setTimeout(() => {
         infinite2()
