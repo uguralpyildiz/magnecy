@@ -16,44 +16,102 @@ const web2 = document.querySelector("#brandsweb2")
 
     function infinite() {
         setTimeout(() => {
-            web2.innerHTML = "Social Media"
+            web2.style.top = "50px"
         }, 1000);
         setTimeout(() => {
-            web2.innerHTML = "Influencer"
+            web2.innerHTML = "Social Media"
+            web2.style.fontFamily = "'Montserrat', sans-serif"
+            web2.style.top = "0px"
+            
         }, 2000);
         setTimeout(() => {
-            web2.innerHTML = "Marketing"
+            web2.style.top = "-50px"
         }, 3000);
         setTimeout(() => {
-            web2.innerHTML = "Web2"
+            web2.innerHTML = "Influencer"
+            web2.style.fontFamily = "'Montserrat', sans-serif"
+            web2.style.top = "0px"
+            
         }, 4000);
         setTimeout(() => {
-            infinite()
+            web2.style.top = "50px"
         }, 5000);
+        setTimeout(() => {
+            web2.innerHTML = "Marketing"
+            web2.style.fontFamily = "'Montserrat', sans-serif"
+            web2.style.top = "0px"
+            
+        }, 6000);
+        setTimeout(() => {
+            web2.style.top = "-50px"
+        }, 7000);
+        setTimeout(() => {
+            web2.innerHTML = "Web2"
+            web2.style.fontFamily = "'Batangas', serif"
+            web2.style.top = "0px"
+            
+        }, 8000);
+        setTimeout(() => {
+            web2.style.top = "50px"
+        }, 9000);
+        setTimeout(() => {
+            infinite()
+        }, 9000);
     }
 
     infinite()
+
 const web3 = document.querySelector("#brandsweb3")
 
-    function infinite2() {
-        setTimeout(() => {
-            web3.innerHTML = "Crypto"
-        }, 1000);
-        setTimeout(() => {
-            web3.innerHTML = "Blockchain"
-        }, 2000);
-        setTimeout(() => {
-            web3.innerHTML = "NFT"
-        }, 3000);
-        setTimeout(() => {
-            web3.innerHTML = "Web3"
-        }, 4000);
-        setTimeout(() => {
-            infinite2()
-        }, 5000);
-    }
+function infinite2() {
+    setTimeout(() => {
+        web3.style.top = "50px"
+    }, 1000);
+    setTimeout(() => {
+        web3.innerHTML = "Crypto"
+        web3.style.fontFamily = "'Montserrat', sans-serif"
+        web3.style.top = "0px"
 
-    infinite2()
+    }, 2000);
+    setTimeout(() => {
+        web3.style.top = "-50px"
+    }, 3000);
+    setTimeout(() => {
+        web3.innerHTML = "Blockchain"
+        web3.style.fontFamily = "'Montserrat', sans-serif"
+        web3.style.top = "0px"
+
+    }, 4000);
+    setTimeout(() => {
+        web3.style.top = "50px"
+    }, 5000);
+    setTimeout(() => {
+        web3.innerHTML = "NFT"
+        web3.style.fontFamily = "'Montserrat', sans-serif"
+        web3.style.top = "0px"
+
+    }, 6000);
+    setTimeout(() => {
+        web3.style.top = "-50px"
+    }, 7000);
+    setTimeout(() => {
+        web3.innerHTML = "Web3"
+        web3.style.fontFamily = "'Batangas', serif"
+        web3.style.top = "0px"
+
+    }, 8000);
+    setTimeout(() => {
+        web3.style.top = "50px"
+    }, 9000);
+    setTimeout(() => {
+        infinite2()
+    }, 9001);
+}
+
+infinite2()
+
+
+    
 
 let socialMediaCount = 1;
 

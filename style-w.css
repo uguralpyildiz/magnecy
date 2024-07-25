@@ -264,7 +264,16 @@ nav {
     overflow: hidden;
     cursor: pointer;
 }
-
+#brandsweb2{
+    position: relative;
+    top: 0px;
+    transition: .2s ease all;
+}
+#brandsweb3{
+    position: relative;
+    top: 0px;
+    transition: .2s ease all;
+}
 .lang-theme {
     display: flex;
     justify-content: end !important;

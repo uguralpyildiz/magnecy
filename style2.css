@@ -577,7 +577,17 @@ section .container img {
     left: 49.6%;
     text-decoration: none;
 }
+#brandsweb2 {
+    position: relative;
+    top: 0px;
+    transition: .2s ease all;
+}
 
+#brandsweb3 {
+    position: relative;
+    top: 0px;
+    transition: .2s ease all;
+}
 .text {
     display: block;
     margin-top: 75px;
