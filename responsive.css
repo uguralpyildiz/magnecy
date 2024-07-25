@@ -188,9 +188,9 @@
         display: flex !important;
         flex-direction: row;
     }
-    .button-container a{
-        width: 100px;
-    }
+          .button-container a {
+              width: 140px;
+          }
     .fa-angle-right{
         display: none !important;
     }
