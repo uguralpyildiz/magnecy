@@ -110,6 +110,37 @@ function infinite2() {
 
 infinite2()
 
+document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll('video[data-src]');
+
+    const loadVideo = (video) => {
+        const src = video.getAttribute('data-src');
+        if (src) {
+            video.src = src;
+            video.removeAttribute('data-src');
+            video.style.display = 'block'; // Görünür yap
+        }
+    };
+
+    const videoOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadVideo(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, videoOptions);
+
+    videos.forEach(video => {
+        observer.observe(video);
+    });
+});
 
     
 
