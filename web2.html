@@ -142,6 +142,11 @@
         </div>
     </div>
     <div class="overlay"></div>
+    <div class="web-overlay">
+        <img width="150px" src="img/logo-w.png" alt="logo">
+        <div class="loader"></div>
+        
+    </div>
     <section class="main-section ">
         <div class="container main creator-sec">
             <div class="main-text">
@@ -427,6 +432,13 @@
             window.addEventListener("resize", callbackFunc);
             window.addEventListener("scroll", callbackFunc);
         })();
+    </script>
+    <script>
+        const weboverlay = document.querySelector(".web-overlay")
+
+        setTimeout(() => {
+            weboverlay.style.top = "-200%"
+        }, 3000);
     </script>
     <script src="script.js"></script>
 </body>
