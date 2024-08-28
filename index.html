@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magnecy</title>
-    <link id="style1" rel="stylesheet" href="style2.css">
-    <link id="style2" rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -24,121 +22,43 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="https://kit.fontawesome.com/607e4879ac.js" crossorigin="uguralpyildiz"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const theme = localStorage.getItem('theme');
-            if (theme === 'dark') {
-                applyDarkTheme();
-            }
-        });
-
-        function applyDarkTheme() {
-            document.getElementById('style1').setAttribute('href', 'style-w.css');
-            document.getElementById('style2').setAttribute('href', 'responsive-w.css');
-            document.querySelectorAll('a .fa-sun').forEach(el => {
-                el.classList.remove('fa-sun');
-                el.classList.add('fa-moon');
-            });
-            document.querySelectorAll('img').forEach(img => {
-                if (img.src.includes('logo-w.png')) {
-                    img.setAttribute('src', 'img/logo-b.png');
-                }
-            });
-            localStorage.setItem('theme', 'dark');
-        }
-
-        function applyLightTheme() {
-            document.getElementById('style1').setAttribute('href', 'style2.css');
-            document.getElementById('style2').setAttribute('href', 'responsive.css');
-            document.querySelectorAll('a .fa-moon').forEach(el => {
-                el.classList.remove('fa-moon');
-                el.classList.add('fa-sun');
-            });
-            document.querySelectorAll('img').forEach(img => {
-                if (img.src.includes('logo-b.png')) {
-                    img.setAttribute('src', 'img/logo-w.png');
-                }
-            });
-            localStorage.setItem('theme', 'light');
-        }
-
-        document.addEventListener('click', function (event) {
-            if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
-                const theme = localStorage.getItem('theme');
-                if (theme === 'dark') {
-                    applyLightTheme();
-                } else {
-                    applyDarkTheme();
-                }
-            }
-        });
-    </script>
+    <script src="https://kit.fontawesome.com/e2bce648c2.js" crossorigin="hurphygames"></script>
 </head>
-
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="img/magnectintro.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
     
-
+    
     <nav style="position: absolute;">
         <div class="container">
+            
             <div class="lang-theme-op">
                 <div class="full-e">
                     <a href="index.html"><img width="120px" src="img/logo-w.png" alt="logo-white"></a>
                 </div>
                 <div class="solonely">
                     <div class="theme-container">
-                        <a ><i class="fa-solid fa-sun"></i></a>
+                    
+                        <a href="#"><i class="fa-solid fa-sun"></i></a>
                     </div>
                     <div class="lang-container">
                         <div class="lang-button">
-                            <img width="24" height="24" src="https://img.icons8.com/color/24/great-britain.png"
-                                alt="great-britain" />
+                            <img width="24" height="24" src="https://img.icons8.com/color/24/great-britain.png" alt="great-britain" />
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="lang-dropdown">
-                            <a href="index-ar.html"><img width="24" height="24"
-                                    src="https://img.icons8.com/fluency/24/saudi-arabia.png" alt="saudi-arabia" /></a>
+                    
+                            <a href="#"><img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
+                                    alt="saudi-arabia" /></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-
-    <div class="nav2">
-        <div class="theme-container" style="width: 64px;">
-            <a ><i class="fa-solid fa-sun"></i></a>
-        </div>
-        <div class="logo-section-nav">
-            <a href="index.html"><img src="img/logo-w.png" alt="logo"></a>
-        </div>
-        <div class="lang-container" style="margin-left: 0 !important;">
-            <div class="lang-button">
-                <img width="24" height="24" src="https://img.icons8.com/color/24/great-britain.png"
-                    alt="great-britain" />
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="lang-dropdown">
-                <a href="index-ar.html"><img width="24" height="24"
-                        src="https://img.icons8.com/fluency/24/saudi-arabia.png" alt="saudi-arabia" /></a>
-            </div>
-        </div>
-    </div>
-
     
-    <div class="web-overlay">
-        <img width="150px" src="img/logo-w.png" alt="logo">
-        <div class="loader"></div>
-        
-    </div>
-    <video autoplay muted loop id="myVideo" class="desktopvideo">
-        <source src="img/magnectintro.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <video autoplay muted loop id="myVideo" class="mobilevideo">
-        <source src="img/m-mobile.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
     <section>
         <div class="main-section-column">
             <div class="text-content-home">
@@ -156,63 +76,36 @@
                     </div>
                 </div>
             </div>
-            <div class="social-media-container" style="width: 100%; position: absolute; bottom: 0;">
-                <div class="skills-bar-about">
-                    <a class="social-links" href="https://www.instagram.com/magnecycom/" target="_blank"><i
-                            class="insta fa-brands fa-instagram"></i></a>
-                    <a class="social-links" href="https://www.linkedin.com/company/magnecycom/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="social-links" href="https://www.youtube.com/@magnecy" target="_blank"><i
-                            class="fa-brands fa-youtube"></i></a>
-                    <a class="social-links" href="https://www.facebook.com/magnecy" target="_blank"><i
-                            class="margin fa-brands fa-facebook-f"></i></a>
-                </div>
+        
+        <div class="social-media-container" style="width: 100%; position: absolute; bottom: 0;">
+            <div class="skills-bar-about">
+                            <a class="social-links" href="https://www.instagram.com/magnecycom/" target="_blank"><i class="insta fa-brands fa-instagram"></i></a>
+                            <a class="social-links" href="https://www.linkedin.com/company/magnecycom/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a class="social-links" href="https://www.youtube.com/@magnecy" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a class="social-links" href="https://www.facebook.com/magnecy" target="_blank"><i class="margin fa-brands fa-facebook-f"></i></a>
+                
+               
+        
             </div>
         </div>
+        </div>
     </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-                const videos = document.querySelectorAll('video[data-src]');
-
-                const loadVideo = (video) => {
-                    const src = video.getAttribute('data-src');
-                    if (src) {
-                        video.src = src;
-                        video.removeAttribute('data-src');
-                        video.style.display = 'block'; // Görünür yap
-                    }
-                };
-
-                const videoOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.1
-                };
-
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            loadVideo(entry.target);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, videoOptions);
-
-                videos.forEach(video => {
-                    observer.observe(video);
-                });
-            });
-
-    </script>
     
-    <script>
-        const weboverlay = document.querySelector(".web-overlay")
+    
 
-        setTimeout(() => {
-            weboverlay.style.top = "-200%"
-        }, 3000);
+    <script>
+        function toggleStylesheet() {
+            var currentStylesheet = document.getElementById('theme-style');
+            var currentHref = currentStylesheet.getAttribute('href');
+
+            if (currentHref === 'style1.css') {
+                currentStylesheet.setAttribute('href', 'style2.css');
+            } else {
+                currentStylesheet.setAttribute('href', 'style1.css');
+            }
+        }
     </script>
+
     <script src="script.js"></script>
 </body>
-
 </html>
