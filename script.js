@@ -12,103 +12,78 @@ overlay.addEventListener("click", ()=>{
     nav.style.left = "-150%"
 })
 
-const web2 = document.querySelector("#brandsweb2")
 
-    function infinite() {
-        setTimeout(() => {
-            web2.style.top = "50px"
-        }, 1000);
-        setTimeout(() => {
-            web2.innerHTML = "Social Media"
-            web2.style.fontFamily = "'Montserrat', sans-serif"
-            web2.style.top = "0px"
-            
-        }, 2000);
-        setTimeout(() => {
-            web2.style.top = "-50px"
-        }, 3000);
-        setTimeout(() => {
-            web2.innerHTML = "Influencer"
-            web2.style.fontFamily = "'Montserrat', sans-serif"
-            web2.style.top = "0px"
-            
-        }, 4000);
-        setTimeout(() => {
-            web2.style.top = "50px"
-        }, 5000);
-        setTimeout(() => {
-            web2.innerHTML = "Marketing"
-            web2.style.fontFamily = "'Montserrat', sans-serif"
-            web2.style.top = "0px"
-            
-        }, 6000);
-        setTimeout(() => {
-            web2.style.top = "-50px"
-        }, 7000);
-        setTimeout(() => {
-            web2.innerHTML = "Web2"
-            web2.style.fontFamily = "'Batangas', serif"
-            web2.style.top = "0px"
-            
-        }, 8000);
-        setTimeout(() => {
-            web2.style.top = "0px"
-        }, 9000);
-        setTimeout(() => {
-            infinite()
-        }, 9000);
+
+function type1() {
+    const textss = ['Web2', 'Social Media', 'Influencer', 'Marketing', 'Web2'];
+    var countt = 0;
+    var indexx = 0;
+    var decrement = 0;
+    var currentText = '';
+    var letter = '';
+
+    function sleepp(delay) {
+        return new Promise(resolve => setTimeout(resolve, delay));
     }
 
-    infinite()
-
-const web3 = document.querySelector("#brandsweb3")
-
-function infinite2() {
-    setTimeout(() => {
-        web3.style.top = "50px"
-    }, 1000);
-    setTimeout(() => {
-        web3.innerHTML = "Crypto"
-        web3.style.fontFamily = "'Montserrat', sans-serif"
-        web3.style.top = "0px"
-
-    }, 2000);
-    setTimeout(() => {
-        web3.style.top = "-50px"
-    }, 3000);
-    setTimeout(() => {
-        web3.innerHTML = "Blockchain"
-        web3.style.fontFamily = "'Montserrat', sans-serif"
-        web3.style.top = "0px"
-
-    }, 4000);
-    setTimeout(() => {
-        web3.style.top = "50px"
-    }, 5000);
-    setTimeout(() => {
-        web3.innerHTML = "NFT"
-        web3.style.fontFamily = "'Montserrat', sans-serif"
-        web3.style.top = "0px"
-
-    }, 6000);
-    setTimeout(() => {
-        web3.style.top = "-50px"
-    }, 7000);
-    setTimeout(() => {
-        web3.innerHTML = "Web3"
-        web3.style.fontFamily = "'Batangas', serif"
-        web3.style.top = "0px"
-
-    }, 8000);
-    setTimeout(() => {
-        web3.style.top = "0px"
-    }, 9000);
-    setTimeout(() => {
-        infinite2()
-    }, 9001);
+    const typeWrite = async () => {
+        if (countt == textss.length) {
+            countt = 0;
+        }
+        currentWord = textss[countt];
+        currentLetter = currentWord.slice(0, ++indexx);
+        document.querySelector(".job-bar").textContent = currentLetter;
+        if (indexx == currentWord.length) {
+            await sleepp(1500);
+            while (indexx > 0) {
+                currentLetter = currentWord.slice(0, --indexx);
+                document.querySelector(".job-bar").textContent = currentLetter;
+                await sleepp(50);
+            }
+            countt++;
+            indexx = 0;
+            await sleepp(500);
+        }
+        setTimeout(typeWrite, Math.random() * 200 + 50);
+    }
+    typeWrite();
 }
+function type2() {
+    const texts = ['Web3', 'Crypto', 'Blockchain', 'NFT', 'Web3'];
+    var count = 0;
+    var index = 0;
+    var decrement = 0;
+    var currentText = '';
+    var letter = '';
 
-infinite2()
+    function sleep(delay) {
+        return new Promise(resolve => setTimeout(resolve, delay));
+    }
+
+    const typeWrite2 = async () => {
+        if (count == texts.length) {
+            count = 0;
+        }
+        currentWorddd = texts[count];
+        currentLetter = currentWorddd.slice(0, ++index);
+        document.querySelector(".job-bar2").textContent = currentLetter;
+        if (index == currentWorddd.length) {
+            await sleep(1500);
+            while (index > 0) {
+                currentLetter = currentWorddd.slice(0, --index);
+                document.querySelector(".job-bar2").textContent = currentLetter;
+                await sleep(50);
+            }
+            count++;
+            index = 0;
+            await sleep(500);
+        }
+        setTimeout(typeWrite2, Math.random() * 200 + 50);
+    }
+    typeWrite2();
+}
+type1()
+type2()
 
 
     
