@@ -1492,3 +1492,38 @@ h3 {
 .blocked:hover {
     backdrop-filter: blur(12px);
 }
+.typewriting,
+.typewriting2 {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0;
+    height: 30px;
+}
+
+.job-bar,
+.job-bar2 {
+    position: relative;
+}
+
+.job-bar::after,
+.job-bar2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: -2px;
+    height: 80%;
+    width: 2px;
+    background: #fff;
+    animation: blink 0.7s ease infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
