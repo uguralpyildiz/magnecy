@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="transition: .3s ease all;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magnecy | Creator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
-    <link rel="stylesheet" href="style1.css"> 
+    <link id="style1" rel="stylesheet" href="style2.css">
+    <link id="style2" rel="stylesheet" href="responsive.css"> 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -24,7 +25,70 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="https://kit.fontawesome.com/e2bce648c2.js" crossorigin="hurphygames"></script>
+    <script src="https://kit.fontawesome.com/607e4879ac.js" crossorigin="uguralpyildiz"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark') {
+                    applyDarkTheme();
+                } else {
+                    applyLightTheme(); // Eğer tema yoksa, varsayılan olarak light tema uygula
+                }
+            });
+
+            function applyDarkTheme() {
+                document.getElementById('style1').setAttribute('href', 'style-w.css');
+                document.getElementById('style2').setAttribute('href', 'responsive-w.css');
+                document.querySelectorAll('a .fa-sun').forEach(el => {
+                    el.classList.remove('fa-sun');
+                    el.classList.add('fa-moon');
+                });
+                document.querySelectorAll('img').forEach(img => {
+                    if (img.src.includes('logo-w.png')) {
+                        img.setAttribute('src', 'img/logo-b.png');
+                    } else if (img.src.includes('slogan.png')) {
+                        img.setAttribute('src', 'img/slogan2.png');
+                    }
+                });
+                document.querySelectorAll('div.slider img').forEach(img => {
+                    const src = img.getAttribute('src');
+                    img.setAttribute('src', src.replace('white/', 'black/'));
+                });
+                localStorage.setItem('theme', 'dark');
+            }
+
+            function applyLightTheme() {
+                document.getElementById('style1').setAttribute('href', 'style2.css');
+                document.getElementById('style2').setAttribute('href', 'responsive.css');
+                document.querySelectorAll('a .fa-moon').forEach(el => {
+                    el.classList.remove('fa-moon');
+                    el.classList.add('fa-sun');
+                });
+                document.querySelectorAll('img').forEach(img => {
+                    if (img.src.includes('logo-b.png')) {
+                        img.setAttribute('src', 'img/logo-w.png');
+                    } else if (img.src.includes('slogan2.png')) {
+                        img.setAttribute('src', 'img/slogan.png');
+                    }
+                });
+                document.querySelectorAll('div.slider img').forEach(img => {
+                    const src = img.getAttribute('src');
+                    img.setAttribute('src', src.replace('black/', 'white/'));
+                });
+                localStorage.setItem('theme', 'light');
+            }
+
+            document.addEventListener('click', function (event) {
+                if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
+                    const theme = localStorage.getItem('theme');
+                    if (theme === 'dark') {
+                        applyLightTheme();
+                    } else {
+                        applyDarkTheme();
+                    }
+                }
+            });
+    </script>
 </head>
 <body>
     
@@ -43,8 +107,8 @@
                 </div>
                 <div class="lang-theme">
                     <a href="contact.html">Contact</a>
-                    <div class="theme-container">
-                        <a href="#"><i class="fa-solid fa-sun"></i></a>
+                    <div class="theme-container mobile-themes">
+                        <a><i class="fa-solid fa-sun"></i></a>
                     </div>
                     <div class="lang-container">
                         <div class="lang-button">
@@ -54,7 +118,7 @@
                         </div>
                         <div class="lang-dropdown">
     
-                            <a href="#"><img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
+                            <a href="creator-ar.html"><img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
                                     alt="saudi-arabia" /></a>
                         </div>
                     </div>
@@ -63,11 +127,26 @@
             </div>
         </div>
     </nav>
+    <div class="nav2">
+        <div class="theme-container" style="width: 44px;">
+    
+            <a><i class="fa-solid fa-sun"></i></a>
+        </div>
+        <div class="logo-section-nav">
+            <a href="index.html"><img src="img/logo-w.png" alt="logo"></a>
+        </div>
+        <div class="sl">
+            <div class="menubtn-m" style="width: 44px;">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
     <div class="overlay"></div>
+     
     <section class="main-section ">
         <div class="container main creator-sec">
             <div class="main-text">
-                <h1><span>For</span><br>Creators</h1>
+                <h1><span>For</span> Creators</h1>
             </div>
     
         </div>
@@ -79,10 +158,14 @@
         </a>
     </section>
    </div>
-<video autoplay muted loop id="myVideo">
-    <source src="img/magnectintro.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-</video>
+<video autoplay muted loop playsinline id="myVideo" class="desktopvideo">
+        <source src="img/magnectintro.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <video autoplay muted loop playsinline id="myVideo" class="mobilevideo">
+        <source src="img/m-mobile.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
 
     <section id="page">
         <div class="creator-content-section" style="text-align: center;">
@@ -142,6 +225,58 @@
                         <div class="bar">
                             <div class="progress"></div>
                         </div>
+                        <!-- <div class="b-creator-sec">
+                            <div class="box-creator">
+                                <img src="img/azayes.jpg" alt="azayes">
+                                <div class="creator-title" style="text-align: center;">
+                                    Azayes
+                                </div>
+                                <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
+                                </div>
+                            </div>
+                            <div class="box-creator">
+                                <img src="img/sarah.jpg" alt="azayes">
+                                <div class="creator-title" style="text-align: center;">
+                                    Sarah Ben Garsallah
+                                </div>
+                                <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
+                                </div>
+                            </div>
+                            <div class="box-creator">
+                                <img src="img/demo.jpg" alt="title">
+                                <div class="creator-title" style="text-align: center;">
+                                    Title
+                                </div>
+                                <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
+                                </div>
+                            </div>
+                            <div class="box-creator">
+                                <img src="img/demo.jpg" alt="title">
+                                <div class="creator-title" style="text-align: center;">
+                                    Title
+                                </div>
+                                <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
+                                    <a href="#"><img style="width: 48px;" width="48" height="48"
+                                            src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
+                                </div>
+                            </div>
+                        
+                        
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -208,7 +343,7 @@
                             <textarea id="reason" name="reason" placeholder="Why do you want to become a creator with Magnecy?"
                                 class="form-input"></textarea>
                         </div>
-                        <br><br>
+                          
                         <button type="submit" value="Submit" class="form-input submit-button">Send</button>
                         <div id="submit-message" class="submit-message"></div>
                     </form>
@@ -277,6 +412,8 @@
             <a href="https://www.instagram.com/magnecycom/" target="_blank"><i class="insta fa-brands fa-instagram"></i></a>
         <a href="https://www.linkedin.com/company/magnecycom/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://www.youtube.com/@magnecy" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://www.x.com/magnecy" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://www.discord.com/magnecy" target="_blank"><i class="fa-brands fa-discord"></i></a>
         <a href="https://www.facebook.com/magnecy" target="_blank"><i class="margin fa-brands fa-facebook-f"></i></a>
         </span>
     </div>
@@ -316,6 +453,13 @@
             window.addEventListener("resize", callbackFunc);
             window.addEventListener("scroll", callbackFunc);
         })();
+    </script>
+    <script>
+        const weboverlay = document.querySelector(".web-overlay")
+
+        setTimeout(() => {
+            weboverlay.style.top = "-200%"
+        }, 3000);
     </script>
     <script src="script.js"></script>
 </body>

@@ -67,6 +67,7 @@ section {
 
 /* HTML: <div class="loader"></div> */
 .loader {
+    display: none;
     width: 30px;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -290,7 +291,7 @@ nav {
     transition: .4s ease all;
     z-index: 999;
     box-shadow: 0 0 15px #0072B150;
-
+    cursor: default !important;
     width: 24%;
 
 }
@@ -307,10 +308,7 @@ nav {
     width: 30% !important;
 }
 
-.page-box:hover {
-    transform: scale(1.05);
-    background: rgb(229, 203, 241);
-}
+
 
 .page-alt {
     display: flex;
@@ -416,22 +414,7 @@ nav {
     cursor: pointer;
 }
 
-.langanim::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -100%;
-    background: linear-gradient(to left, #ffffff00, #fff, #ffffff00);
-    width: 50%;
-    transform: rotate(-180deg);
-    height: 500%;
-    transition: .5s ease all;
-}
 
-.langanim:hover.langanim::before {
-    left: 120%;
-
-}
 
 hr {
 
@@ -611,14 +594,15 @@ section .container img {
 }
 
 #myVideo {
-    object-fit: cover;
-    object-position: center center;
+    
     position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
+    object-fit: cover !important;
+    object-position: center center !important;
 }
 
 .chevron:first-child {
@@ -988,12 +972,20 @@ time i {
     background: #b91d1d;
 }
 
-.social-links:nth-child(5):hover,
 .social-links:nth-child(4):hover {
     background: #3167D3;
     color: #fff;
 }
 
+.social-links:nth-child(5):hover {
+    background: #000000;
+    color: #fff;
+}
+
+.social-links:nth-child(6):hover {
+    background: #4b0cb1;
+    color: #fff;
+}
 .button-container {
     position: relative;
     display: flex !important;
