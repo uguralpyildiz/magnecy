@@ -578,7 +578,7 @@ section .container img {
 }
 
 .creator {
-    background: url(img/magnectintro.mp4);
+    
     background-position: center;
     object-fit: contain;
     background-repeat: no-repeat;
@@ -972,17 +972,13 @@ time i {
     background: #b91d1d;
 }
 
-.social-links:nth-child(4):hover {
-    background: #3167D3;
-    color: #fff;
-}
 
-.social-links:nth-child(5):hover {
+.social-links:nth-child(4):hover {
     background: #000000;
     color: #fff;
 }
 
-.social-links:nth-child(6):hover {
+.social-links:nth-child(5):hover {
     background: #4b0cb1;
     color: #fff;
 }
