@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="ar">
-
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnecy | علامات تجارية</title>
+    <title>Magnecy | العلامات التجارية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
     <link id="style1" rel="stylesheet" href="style2.css">
@@ -28,148 +26,144 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://kit.fontawesome.com/607e4879ac.js" crossorigin="uguralpyildiz"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const theme = localStorage.getItem('theme');
-            if (theme === 'dark') {
-                applyDarkTheme();
-            }
-        });
-
-        function applyDarkTheme() {
-            document.getElementById('style1').setAttribute('href', 'style-w.css');
-            document.getElementById('style2').setAttribute('href', 'responsive-w.css');
-            document.querySelectorAll('a .fa-sun').forEach(el => {
-                el.classList.remove('fa-sun');
-                el.classList.add('fa-moon');
-            });
-            document.querySelectorAll('img').forEach(img => {
-                if (img.src.includes('logo-w.png')) {
-                    img.setAttribute('src', 'img/logo-b.png');
-                }
-            });
-            localStorage.setItem('theme', 'dark');
-        }
-
-        function applyLightTheme() {
-            document.getElementById('style1').setAttribute('href', 'style2.css');
-            document.getElementById('style2').setAttribute('href', 'responsive.css');
-            document.querySelectorAll('a .fa-moon').forEach(el => {
-                el.classList.remove('fa-moon');
-                el.classList.add('fa-sun');
-            });
-            document.querySelectorAll('img').forEach(img => {
-                if (img.src.includes('logo-b.png')) {
-                    img.setAttribute('src', 'img/logo-w.png');
-                }
-            });
-            localStorage.setItem('theme', 'light');
-        }
-
-        document.addEventListener('click', function (event) {
-            if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
                 const theme = localStorage.getItem('theme');
                 if (theme === 'dark') {
-                    applyLightTheme();
-                } else {
                     applyDarkTheme();
                 }
+            });
+
+            function applyDarkTheme() {
+                document.getElementById('style1').setAttribute('href', 'style-w.css');
+                document.getElementById('style2').setAttribute('href', 'responsive-w.css');
+                document.querySelectorAll('a .fa-sun').forEach(el => {
+                    el.classList.remove('fa-sun');
+                    el.classList.add('fa-moon');
+                });
+                document.querySelectorAll('img').forEach(img => {
+                    if (img.src.includes('logo-w.png')) {
+                        img.setAttribute('src', 'img/logo-b.png');
+                    }
+                });
+                localStorage.setItem('theme', 'dark');
             }
-        });
-    </script>
+
+            function applyLightTheme() {
+                document.getElementById('style1').setAttribute('href', 'style2.css');
+                document.getElementById('style2').setAttribute('href', 'responsive.css');
+                document.querySelectorAll('a .fa-moon').forEach(el => {
+                    el.classList.remove('fa-moon');
+                    el.classList.add('fa-sun');
+                });
+                document.querySelectorAll('img').forEach(img => {
+                    if (img.src.includes('logo-b.png')) {
+                        img.setAttribute('src', 'img/logo-w.png');
+                    }
+                });
+                localStorage.setItem('theme', 'light');
+            }
+
+            document.addEventListener('click', function (event) {
+                if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
+                    const theme = localStorage.getItem('theme');
+                    if (theme === 'dark') {
+                        applyLightTheme();
+                    } else {
+                        applyDarkTheme();
+                    }
+                }
+            });
+        </script>
 </head>
-
 <body>
-
-    <div class="creator">
-        <nav>
-            <div class="container">
-
-                <div class="lang-theme-op page-flex">
-                    <div class="logo-section-nav">
-                        <a href="index-ar.html"><img src="img/logo-w.png" alt="الشعار"></a>
-                    </div>
-                    <div class="nav-button">
-                        <a href="creator-ar.html">منشئ</a>
-                        <a href="brand-ar.html">علامة تجارية</a>
-
-                    </div>
-                    <div class="lang-theme">
-                        <a href="contact-ar.html">تواصل</a>
-                        <div class="theme-container mobile-themes">
-                             <a><i class="fa-solid fa-sun"></i></a>
-                        </div>
-                        <div class="lang-container">
-                            <div class="lang-button">
-                                <img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
-                                    alt="saudi-arabia" />
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div class="lang-dropdown">
-
-                                <a href="brand.html"><img width="24" height="24"
-                                        src="https://img.icons8.com/color/24/great-britain.png"
-                                        alt="great-britain" /></a>
-                            </div>
-                        </div>
-
-                    </div>
+    
+   <div class="creator">
+    <nav>
+        <div class="container">
+    
+            <div class="lang-theme-op page-flex">
+                <div class="logo-section-nav">
+                    <a href="index.html"><img src="img/logo-w.png" alt="logo"></a>
                 </div>
-            </div>
-        </nav>
-        <video autoplay muted loop id="myVideo" class="desktopvideo">
-            <source src="img/magnectintro.mp4" type="video/mp4">
-            متصفحك لا يدعم الفيديو.
-        </video>
-        <video autoplay muted loop id="myVideo" class="mobilevideo">
-            <source src="img/m-mobile.mp4" type="video/mp4">
-            متصفحك لا يدعم الفيديو.
-        </video>
-        <div class="nav2">
-            <div class="theme-container" style="width: 44px;">
-
-                <a href="#"><i class="fa-solid fa-sun "></i></a>
-            </div>
-            <div class="logo-section-nav">
-                <a href="index-ar.html"><img src="img/logo-w.png" alt="الشعار"></a>
-            </div>
-            <div class="sl">
-                <div class="menubtn-m" style="width: 44px;">
-                    <i class="fa-solid fa-bars"></i>
+                <div class="nav-button">
+                    <a href="creator-ar.html">المبدعون</a>
+                    <a href="brand-ar.html">العلامات التجارية</a>
+                   
+                </div>
+                <div class="lang-theme">
+                    <a href="contact.html">اتصل بنا</a>
+                    <div class="theme-container mobile-themes">
+                         <a><i class="fa-solid fa-sun"></i></a>
+                    </div>
+                    <div class="lang-container">
+                        <div class="lang-button">
+                            <img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
+                                alt="saudi-arabia" />
+                             <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-dropdown">
+    
+                            <a href="brand.html"><img width="24" height="24" src="https://img.icons8.com/color/24/great-britain.png"
+                                    alt="great-britain" /></a>
+                        </div>
+                    </div>
+    
                 </div>
             </div>
         </div>
-        <div class="overlay"></div>
+    </nav>
+    <video autoplay muted loop playsinline id="myVideo" class="desktopvideo">
+        <source src="img/magnectintro.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <video autoplay muted loop playsinline id="myVideo" class="mobilevideo">
+        <source src="img/m-mobile.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="nav2">
+        <div class="theme-container" style="width: 44px;">
+    
+            <a href="#"><i class="fa-solid fa-sun "></i></a>
+        </div>
+        <div class="logo-section-nav">
+            <a href="index.html"><img src="img/logo-w.png" alt="logo"></a>
+        </div>
+        <div class="sl">
+            <div class="menubtn-m" style="width: 44px;">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
      
-        <section class="main-section ">
-            <div class="container main creator-sec" style="flex-direction: column;">
-                <div class="main-text">
-                    <span>للـ</span> علامات تجارية</h1>
-                </div>
-        
+    <section class="main-section ">
+        <div class="container main creator-sec" style="flex-direction: column;">
+            <div class="main-text">
+                <h1><span>لـ</span> العلامات التجارية</h1>
+            </div>
+            
                 <div class="button-container">
-                    <a style="background: #a51c7a;" class="lang-button" href="web2.html">
-                        <div class="typewriting">
-                
-                            <div class="job-bar">Web2</div>
-                        </div>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                    <a style="background: #a51c7a;" class="lang-button" href="web3.html">
+                    <a style="background: #a51c7a;" class="lang-button" href="web2-ar.html">
+                    <div class="typewriting">
+                         
+                        <div class="job-bar">Web2</div>
+                    </div>
+                        <i class="fa-solid fa-angle-left"></i></a>
+                    <a style="background: #a51c7a;" class="lang-button" href="web3-ar.html">
                         <div class="typewriting2">
                             <div class="job-bar2">Web3</div>
                         </div>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
+                        <i class="fa-solid fa-angle-left"></i></a>
                 </div>
-            </div>
+        </div>
+       
         
-        
-        </section>
-    </div>
+    </section>
+   </div>
 
-
-
+   
+    
 
     <script>
 
@@ -215,5 +209,4 @@
     </script>
     <script src="script.js"></script>
 </body>
-
 </html>

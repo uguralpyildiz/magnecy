@@ -1,15 +1,13 @@
-
 <!DOCTYPE html>
-<html lang="ar">
-
+<html lang="ar" dir="rtl" style="transition: .3s ease all;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnecy | صانع</title>
+    <title>Magnecy | المبدعون</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
     <link id="style1" rel="stylesheet" href="style2.css">
-    <link id="style2" rel="stylesheet" href="responsive.css">
+    <link id="style2" rel="stylesheet" href="responsive.css"> 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -30,183 +28,181 @@
     <script src="https://kit.fontawesome.com/607e4879ac.js" crossorigin="uguralpyildiz"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const theme = localStorage.getItem('theme');
-            if (theme === 'dark') {
-                applyDarkTheme();
-            } else {
-                applyLightTheme(); // Eğer tema yoksa, varsayılan olarak light tema uygula
-            }
-        });
-
-        function applyDarkTheme() {
-            document.getElementById('style1').setAttribute('href', 'style-w.css');
-            document.getElementById('style2').setAttribute('href', 'responsive-w.css');
-            document.querySelectorAll('a .fa-sun').forEach(el => {
-                el.classList.remove('fa-sun');
-                el.classList.add('fa-moon');
-            });
-            document.querySelectorAll('img').forEach(img => {
-                if (img.src.includes('logo-w.png')) {
-                    img.setAttribute('src', 'img/logo-b.png');
-                } else if (img.src.includes('slogan.png')) {
-                    img.setAttribute('src', 'img/slogan2.png');
-                }
-            });
-            document.querySelectorAll('div.slider img').forEach(img => {
-                const src = img.getAttribute('src');
-                img.setAttribute('src', src.replace('white/', 'black/'));
-            });
-            localStorage.setItem('theme', 'dark');
-        }
-
-        function applyLightTheme() {
-            document.getElementById('style1').setAttribute('href', 'style2.css');
-            document.getElementById('style2').setAttribute('href', 'responsive.css');
-            document.querySelectorAll('a .fa-moon').forEach(el => {
-                el.classList.remove('fa-moon');
-                el.classList.add('fa-sun');
-            });
-            document.querySelectorAll('img').forEach(img => {
-                if (img.src.includes('logo-b.png')) {
-                    img.setAttribute('src', 'img/logo-w.png');
-                } else if (img.src.includes('slogan2.png')) {
-                    img.setAttribute('src', 'img/slogan.png');
-                }
-            });
-            document.querySelectorAll('div.slider img').forEach(img => {
-                const src = img.getAttribute('src');
-                img.setAttribute('src', src.replace('black/', 'white/'));
-            });
-            localStorage.setItem('theme', 'light');
-        }
-
-        document.addEventListener('click', function (event) {
-            if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
                 const theme = localStorage.getItem('theme');
                 if (theme === 'dark') {
-                    applyLightTheme();
-                } else {
                     applyDarkTheme();
+                } else {
+                    applyLightTheme(); // Eğer tema yoksa, varsayılan olarak light tema uygula
                 }
+            });
+
+            function applyDarkTheme() {
+                document.getElementById('style1').setAttribute('href', 'style-w.css');
+                document.getElementById('style2').setAttribute('href', 'responsive-w.css');
+                document.querySelectorAll('a .fa-sun').forEach(el => {
+                    el.classList.remove('fa-sun');
+                    el.classList.add('fa-moon');
+                });
+                document.querySelectorAll('img').forEach(img => {
+                    if (img.src.includes('logo-w.png')) {
+                        img.setAttribute('src', 'img/logo-b.png');
+                    } else if (img.src.includes('slogan.png')) {
+                        img.setAttribute('src', 'img/slogan2.png');
+                    }
+                });
+                document.querySelectorAll('div.slider img').forEach(img => {
+                    const src = img.getAttribute('src');
+                    img.setAttribute('src', src.replace('white/', 'black/'));
+                });
+                localStorage.setItem('theme', 'dark');
             }
-        });
+
+            function applyLightTheme() {
+                document.getElementById('style1').setAttribute('href', 'style2.css');
+                document.getElementById('style2').setAttribute('href', 'responsive.css');
+                document.querySelectorAll('a .fa-moon').forEach(el => {
+                    el.classList.remove('fa-moon');
+                    el.classList.add('fa-sun');
+                });
+                document.querySelectorAll('img').forEach(img => {
+                    if (img.src.includes('logo-b.png')) {
+                        img.setAttribute('src', 'img/logo-w.png');
+                    } else if (img.src.includes('slogan2.png')) {
+                        img.setAttribute('src', 'img/slogan.png');
+                    }
+                });
+                document.querySelectorAll('div.slider img').forEach(img => {
+                    const src = img.getAttribute('src');
+                    img.setAttribute('src', src.replace('black/', 'white/'));
+                });
+                localStorage.setItem('theme', 'light');
+            }
+
+            document.addEventListener('click', function (event) {
+                if (event.target && (event.target.matches('a .fa-sun') || event.target.matches('a .fa-moon'))) {
+                    const theme = localStorage.getItem('theme');
+                    if (theme === 'dark') {
+                        applyLightTheme();
+                    } else {
+                        applyDarkTheme();
+                    }
+                }
+            });
     </script>
 </head>
-
 <body>
-
-    <div class="creator">
-        <nav>
-            <div class="container">
-
-                <div class="lang-theme-op page-flex">
-                    <div class="logo-section-nav">
-                        <a href="index-ar.html"><img src="img/logo-w.png" alt="logo"></a>
-                    </div>
-                    <div class="nav-button">
-
-                        <a href="creator-ar.html">صانع</a>
-                        <a href="brand-ar.html">علامة تجارية</a>
-                    </div>
-                    <div class="lang-theme">
-                        <a href="contact-ar.html">اتصل</a>
-                        <div class="theme-container mobile-themes">
-                             <a><i class="fa-solid fa-sun"></i></a>
-                        </div>
-                        <div class="lang-container">
-                            <div class="lang-button">
-                                <img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
-                                    alt="saudi-arabia" />
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div class="lang-dropdown">
-
-                                <a href="creator.html"><img width="24" height="24"
-                                        src="https://img.icons8.com/color/24/great-britain.png"
-                                        alt="great-britain" /></a>
-                            </div>
-                        </div>
-
-                    </div>
+    
+   <div class="creator">
+    <nav>
+        <div class="container">
+    
+            <div class="lang-theme-op page-flex">
+                <div class="logo-section-nav">
+                    <a href="index.html"><img src="img/logo-w.png" alt="logo"></a>
                 </div>
-            </div>
-        </nav>
-        <div class="nav2">
-            <div class="theme-container" style="width: 44px;">
-
-                 <a><i class="fa-solid fa-sun"></i></a>
-            </div>
-            <div class="logo-section-nav">
-                <a href="index-ar.html"><img src="img/logo-w.png" alt="logo"></a>
-            </div>
-            <div class="sl">
-                <div class="menubtn-m" style="width: 44px;">
-                    <i class="fa-solid fa-bars"></i>
+                <div class="nav-button">
+                   
+                    <a href="creator.html">المبدعون</a>
+                    <a href="brand.html">العلامات التجارية</a>
+                </div>
+                <div class="lang-theme">
+                    <a href="contact.html">اتصل بنا</a>
+                    <div class="theme-container mobile-themes">
+                        <a><i class="fa-solid fa-sun"></i></a>
+                    </div>
+                    <div class="lang-container">
+                        <div class="lang-button">
+                            <img width="24" height="24" src="https://img.icons8.com/color/24/great-britain.png"
+                                alt="great-britain" />
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-dropdown">
+    
+                            <a href="creator-ar.html"><img width="24" height="24" src="https://img.icons8.com/fluency/24/saudi-arabia.png"
+                                    alt="saudi-arabia" /></a>
+                        </div>
+                    </div>
+    
                 </div>
             </div>
         </div>
-        <div class="overlay"></div>
-     
-        <section class="main-section ">
-            <div class="container main creator-sec">
-                <div class="main-text">
-                    <h1><span>لـ</span> صناع المحتوى</h1>
-                </div>
-
+    </nav>
+    <div class="nav2">
+        <div class="theme-container" style="width: 44px;">
+    
+            <a><i class="fa-solid fa-sun"></i></a>
+        </div>
+        <div class="logo-section-nav">
+            <a href="index.html"><img src="img/logo-w.png" alt="logo"></a>
+        </div>
+        <div class="sl">
+            <div class="menubtn-m" style="width: 44px;">
+                <i class="fa-solid fa-bars"></i>
             </div>
-            <a href="#page" class="btn-bottom">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <span class="text">انتقل لأسفل</span>
-            </a>
-        </section>
+        </div>
     </div>
-    <video autoplay muted loop id="myVideo" class="desktopvideo">
+    <div class="overlay"></div>
+     
+    <section class="main-section ">
+        <div class="container main creator-sec">
+            <div class="main-text">
+                <h1><span>لـ</span> المبدعين</h1>
+            </div>
+    
+        </div>
+        <a href="#page" class="btn-bottom">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <span class="text">التمرير لأسفل</span>
+        </a>
+    </section>
+   </div>
+<video autoplay muted loop playsinline id="myVideo" class="desktopvideo">
         <source src="img/magnectintro.mp4" type="video/mp4">
-        متصفحك لا يدعم فيديو HTML5.
+        Your browser does not support HTML5 video.
     </video>
-    <video autoplay muted loop id="myVideo" class="mobilevideo">
+    <video autoplay muted loop playsinline id="myVideo" class="mobilevideo">
         <source src="img/m-mobile.mp4" type="video/mp4">
-        متصفحك لا يدعم فيديو HTML5.
+        Your browser does not support HTML5 video.
     </video>
 
     <section id="page">
         <div class="creator-content-section" style="text-align: center;">
             <div class="container">
                 <div class="header-page">
-                    ماجنيكي لـ <span>صناع المحتوى</span>
+                    Magnecy <span>للمبدعين</span>
                 </div>
                 <div class="header-alt">
-                    ماجنيكي هي فريق ديناميكي يكرس جهوده لتقديم إدارة أصول رقمية شاملة، استشارات وسائل التواصل الاجتماعي،
-                    والمزيد لصناع المحتوى والمواهب. نحن نمكّن صناع المحتوى للوصول إلى أقصى إمكانياتهم من خلال إدارة
-                    وتعزيز وجودهم الرقمي.
+                    Magnecy هو فريق ديناميكي مكرس لتوفير إدارة الأصول الرقمية بزاوية 360 درجة، واستشارات وسائل التواصل الاجتماعي، والمزيد 
+                    لصناع المحتوى والمواهب. نحن نمكن المبدعين من الوصول إلى إمكاناتهم الكاملة من خلال إدارة وتعزيز 
+                    حضورهم الرقمي.
                 </div>
                 <div class="page-box-container">
                     <div class="page-box langanim">
                         <div class="page-box-title">
                             إدارة المواهب
                         </div>
-
+                        
                     </div>
                     <div class="page-box langanim">
                         <div class="page-box-title">
                             الإنتاج
                         </div>
-
-
+                        
+                      
                     </div>
                     <div class="page-box langanim">
                         <div class="page-box-title">
-                            إنشاء المحتوى
+                            صناعة المحتوى
                         </div>
-
+                        
                     </div>
                     <div class="page-box langanim">
                         <div class="page-box-title">
                             إدارة المشاريع
                         </div>
-
+                        
                     </div>
                 </div>
             </div>
@@ -214,135 +210,81 @@
             <div class="container">
                 <div class="container-sad">
                     <div class="header-page" style="margin-top: 0;">
-                        صناع المحتوى <span>لنا</span>
+                        <span>مبدعونا</span>
                     </div>
-
+    
                     <div class="header-alt">
-                        اكتشف صناع المحتوى الذين نتعاون معهم ونضيف قيمة لهم من خلال شراكات استراتيجية وحلول مبتكرة.
+                        اكتشف المبدعين الذين نتعاون معهم ونضيف قيمة إليهم من خلال الشراكات الاستراتيجية والحلول 
+                        المبتكرة.
                     </div>
                     <div class="kal">
-                        <h3> قريباً</h3>
+                        <h3>قريباً</h3>
                         <div class="bar">
                             <div class="progress"></div>
                         </div>
-                        <!-- <div class="b-creator-sec">
-                                                <div class="box-creator">
-                                                    <img src="img/azayes.jpg" alt="azayes">
-                                                    <div class="creator-title" style="text-align: center;">
-                                                        Azayes
-                                                    </div>
-                                                    <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
-                                                    </div>
-                                                </div>
-                                                <div class="box-creator">
-                                                    <img src="img/sarah.jpg" alt="azayes">
-                                                    <div class="creator-title" style="text-align: center;">
-                                                        Sarah Ben Garsallah
-                                                    </div>
-                                                    <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
-                                                    </div>
-                                                </div>
-                                                <div class="box-creator">
-                                                    <img src="img/demo.jpg" alt="title">
-                                                    <div class="creator-title" style="text-align: center;">
-                                                        Title
-                                                    </div>
-                                                    <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
-                                                    </div>
-                                                </div>
-                                                <div class="box-creator">
-                                                    <img src="img/demo.jpg" alt="title">
-                                                    <div class="creator-title" style="text-align: center;">
-                                                        Title
-                                                    </div>
-                                                    <div class="creator-title" style="display: flex; align-items: center; justify-content: center; padding-top: 0;">
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
-                                                        <a href="#"><img style="width: 48px;" width="48" height="48"
-                                                                src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /></a>
-                                                    </div>
-                                                </div>
-                                            
-                                            
-                                            </div> -->
-                    </div>
+                        </div>
                 </div>
             </div>
             <hr>
             <div class="container">
                 <div class="header-page">
-                    كن <span>صانع المحتوى</span> لدينا
+                    كن <span>مبدعاً معنا</span>
                 </div>
                 <div class="header-alt">
-                    هل أنت صانع محتوى يتطلع إلى رفع مستوى مسيرتك المهنية؟ انضم إلى ماجنيكي وكن جزءًا من فريقنا
+                    هل أنت صانع محتوى تتطلع للارتقاء بمسيرتك المهنية إلى المستوى التالي؟ انضم إلى Magnecy وكن جزءاً من فريقنا 
                     الديناميكي.
+    
+    
+    
                 </div>
                 <div class="b-creator-sec">
                     <div class="box-creator">
                         <div class="creator-title">
                             فرص النمو
                         </div>
-                        <div class="creator-list">تعاون مع العلامات التجارية</div>
-                        <div class="creator-list">تطوير الجمهور</div>
+                        <div class="creator-list">تعاونات مع العلامات التجارية</div>
+                        <div class="creator-list">تنمية الجمهور</div>
                         <div class="creator-list">استراتيجيات تحقيق الدخل</div>
                     </div>
                     <div class="box-creator">
                         <div class="creator-title">
-                            دعم 360°
+                            دعم 360 درجة
                         </div>
                         <div class="creator-list">استراتيجية المحتوى</div>
                         <div class="creator-list">إدارة المنصات</div>
                         <div class="creator-list">المساعدة التقنية</div>
-
+                        
                     </div>
                     <div class="box-creator">
                         <div class="creator-title">
                             موارد فريدة
                         </div>
-                        <div class="creator-list">ورش العمل والتدريب</div>
+                        <div class="creator-list">ورش عمل وتدريب</div>
                         <div class="creator-list">أدوات إبداعية</div>
-                        <div class="creator-list">فعاليات الشبكات</div>
+                        <div class="creator-list">فعاليات التواصل</div>
                     </div>
                 </div>
-
+    
                 <div class="quick-form">
-                    <div class="slo-container
-
-" style="color: #fff">
-                        قدم <img style="width: 180px; position: relative; top: 7px; margin-left: 8px;"
-                            src="img/logo-w.png" alt="logo">
+                    <div class="slo-container" style="color: #fff">
+                        انضم <img style="width: 180px; position: relative; top: 7px; margin-left: 8px;" src="img/logo-w.png" alt="logo">
                     </div>
                     <form id="my-form" autocomplete="off" onsubmit="handleSubmit(event)">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="الاسم الكامل" required
-                                class="form-input">
+                            <input type="text" id="name" name="name" placeholder="الاسم واللقب" required class="form-input">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="surname" name="surname" placeholder="البريد الإلكتروني" required
-                                class="form-input">
+                            <input type="email" id="surname" name="surname" placeholder="البريد الإلكتروني" required class="form-input">
                         </div>
                         <div id="social-media-container" class="social-media-containers">
                             <div class="form-group">
-                                <input type="text" id="social-media-1" name="social_media_1"
-                                    placeholder="حساب الوسائط الاجتماعية 1" required class="form-input">
+                                <input type="text" id="social-media-1" name="social_media_1" placeholder="حساب تواصل اجتماعي 1"
+                                    required class="form-input">
                                 <button type="button" id="plus-button" onclick="addSocialMediaInput()">+</button>
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea id="reason" name="reason"
-                                placeholder="لماذا ترغب في أن تصبح صانع محتوى مع ماجنيكي؟"
+                            <textarea id="reason" name="reason" placeholder="لماذا ترغب في أن تصبح مبدعاً مع Magnecy؟"
                                 class="form-input"></textarea>
                         </div>
                           
@@ -355,69 +297,71 @@
             <hr>
             <section class="container"
                 style="display: flex; align-items: center; justify-content: center; gap: 35px; margin: 25px auto;">
-                <img src="img/slogan.png" alt="">
+                <img  src="img/slogan.png" alt="">
             </section>
-            <div class="container">
-                <div class="header-page">
-                    العلامات التجارية <span>المميزة</span>
-                </div>
+           <div class="container">
+            <div class="header-page">
+                العلامات التجارية <span>المميزة</span>
             </div>
-
+           </div>
+        
             <div class="slider">
                 <div class="slide-track">
                     <div class="slide">
-                        <img src="img/references/white/26.png" alt="" />
+                        <img src="img/references/white/26.png" 
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/references/white/30.png" alt="" />
+                        <img src="img/references/white/30.png" 
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/references/white/29.png" alt="" />
+                        <img src="img/references/white/29.png" 
+                            alt="" />
                     </div>
-
+                    
                     <div class="slide">
-                        <img src="img/references/white/31.png" alt="" />
+                        <img src="img/references/white/31.png" 
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/references/white/27.png" alt="" />
+                        <img src="img/references/white/27.png" 
+                            alt="" />
                     </div>
                     <div class="slide">
                         <img style="position: relative; top:4px;" src="img/references/white/28.png" alt="" />
                     </div>
-
+                   
                     <div class="slide">
-                        <img src="img/references/white/32.png" alt="" />
+                        <img src="img/references/white/32.png" 
+                            alt="" />
                     </div>
-
+                    
                 </div>
             </div>
         </div>
     </section>
+    
 
-
-    <footer class="text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-            <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-                <img width="80px" src="img/logo-w.png" alt="logow">
-            </a>
-            <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©
-                2020-2026
-                ماجنيكي —
-                <a href="#" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">ماجنيكي</a>
-            </p>
-            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start" style="gap: 10px;">
-                <a href="https://www.instagram.com/magnecycom/" target="_blank"><i
-                        class="insta fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/magnecycom/" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/@magnecy" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+<footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <img width="80px" src="img/logo-w.png" alt="logow">
+        </a>
+        <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2020-2026
+            Magnecy —
+            <a href="#" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">Magnecy</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start" style="gap: 10px;">
+            <a href="https://www.instagram.com/magnecycom/" target="_blank"><i class="insta fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/magnecycom/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@magnecy" target="_blank"><i class="fa-brands fa-youtube"></i></a>
 <a href="https://www.x.com/magnecy_com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
 <a href="https://www.discord.com/magnecy" target="_blank"><i class="fa-brands fa-discord"></i></a>
-                <a href="https://www.facebook.com/magnecy" target="_blank"><i
-                        class="margin fa-brands fa-facebook-f"></i></a>
-            </span>
-        </div>
-    </footer>
+         
+        </span>
+    </div>
+</footer>
 
     <script>
 
@@ -463,5 +407,4 @@
     </script>
     <script src="script.js"></script>
 </body>
-
 </html>
